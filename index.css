@@ -3,43 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    @apply font-poppins text-[#414042] bg-gray-50;
-  }
-  #root {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-  }
-}
-
-@layer components {
-  .custom-checkbox {
-    @apply appearance-none bg-white m-0 w-5 h-5 border border-gray-300 rounded grid place-content-center cursor-pointer transition-all duration-200;
-  }
-  .custom-checkbox:checked { 
-    @apply bg-[#C80A37] border-[#C80A37]; 
-  }
-  .custom-checkbox::before {
-    content: "";
-    @apply w-3 h-3 scale-0 transition-transform duration-100 origin-center bg-white;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  }
-  .custom-checkbox:checked::before { 
-    @apply scale-100; 
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar { 
-    @apply w-1.5 h-1.5; 
-  }
-  .custom-scrollbar::-webkit-scrollbar-track { 
-    @apply bg-gray-100; 
-  }
-  .custom-scrollbar::-webkit-scrollbar-thumb { 
-    @apply bg-gray-300 rounded-full hover:bg-[#C80A37]; 
+  body {
+    @apply font-poppins text-[#414042] bg-white;
   }
 }
